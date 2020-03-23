@@ -12,7 +12,7 @@ Fem_Coded_Freqtable<-table(Fem_Coded_OS)
 
 height<-Fem_Coded_Freqtable
 barnames<-c("Both, G", "Both, B", "Girls", "Boys", "Both")
-barplot(height, names.arg=barnames, ylim=c(0,1100), main= "Responses to Feminine Coded Items")
+barplot(height, names.arg=barnames, ylim=c(0,1500), main= "Responses to Feminine Coded Items")
 
 
 ##All OS Items and Frequency Table and Bargraph #####
