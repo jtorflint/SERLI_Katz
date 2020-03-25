@@ -1,3 +1,4 @@
+
 #Longitudinal ####
 DF_Total<-merge(DF_Sixty, DF_SevTwo, by="Subject_NO")
 
@@ -14,16 +15,87 @@ OS_masc_freq_sevtwo<-table(OS_Masc_SevTwo)
 OS_fem_freq_sixty<-table(OS_Fem_sixty)
 os_fem_freq_sevtwo<-table(OS_Fem_SevTwo)
 
-height<-OS_masc_freq_sixty
-barnames<-c("Both, Girls", "Botdh, Boys", "Girls", "Boys", "Both")
+heightmascsix<-OS_masc_freq_sixty
+barnames<-c("Both, Girls", "Both, Boys", "Girls", "Boys", "Both")
 yplotlimit<- c(0,500)
-barplot(height, names.arg=barnames, ylim=yplotlimit, main="60 Mo Responses to Masc Coded Items")
+barplot(heightmascsix, names.arg=barnames, ylim=yplotlimit, main="60 Mo Responses to Masc Coded Items")
 
-height<-OS_masc_freq_sevtwo
-barplot(height, names.arg=barnames, ylim=yplotlimit, main=" 72 Mo Responses to Masc Coded Items")
+heightmascsectwo<-OS_masc_freq_sevtwo
+barplot(heightmascsectwo, names.arg=barnames, ylim=yplotlimit, main=" 72 Mo Responses to Masc Coded Items")
 
-height<-OS_fem_freq_sixty
-barplot(height, names.arg=barnames, ylim=yplotlimit, main="60 Mo Responses to Fem Coded Items")
+heightfemsix<-OS_fem_freq_sixty
+barplot(heightfemsix, names.arg=barnames, ylim=yplotlimit, main="60 Mo Responses to Fem Coded Items")
 
-height<-os_fem_freq_sevtwo
-barplot(height, names.arg=barnames, ylim=yplotlimit, main= "72 Mo Responses to Fem Coded Items")
+heightfemsevtwo<-os_fem_freq_sevtwo
+barplot(heightfemsevtwo, names.arg=barnames, ylim=yplotlimit, main= "72 Mo Responses to Fem Coded Items")
+
+##mode #####
+
+getmode<-function(x){
+  uniq<-unique(x)
+  uniq[which.max(tabulate(match(x,uniq)))]
+}
+
+mode_HammerOS_sixty<-getmode(DF_Total$HammerOS_M_Sixty)
+mode_HammerOS_SevTwo<-getmode(DF_Total$HammerOS_M_SevTwo)
+
+mode_DeskOS_sixty<-getmode(DF_Total$DeskOS_F_Sixty)
+mode_DeskOS_sevtwo<-getmode(DF_Total$DeskOS_F_SevTwo)
+
+mode_Shovel_sixty<-getmode(DF_Total$ShovelOS_M_Sixty)
+mode_Shovel_sevtwo<-getmode(DF_Total$ShovelOS_M_SevTwo)
+
+mode_Pitcher_sixty<-getmode(DF_Total$PitcherOS_F_Sixty)
+mode_Pitcher_sevtwo<-getmode(DF_Total$PitcherOS_F_SevTwo)
+
+mode_Saw_sixty<-getmode(DF_Total$SawOS_M_Sixty)
+mode_Saw_sevtwo<-getmode(DF_Total$SawOS_M_SevTwo)
+
+mode_stove_sixty<-getmode(DF_Total$StoveOS_F_Sixty)
+mode_stove_sevtwo<-getmode(DF_Total$StoveOS_F_SevTwo)
+
+mode_rifle_sixty<-getmode(DF_Total$RifleOS_M_Sixty)
+mode_rifle_sevtwo<-getmode(DF_Total$RifleOS_M_SevTwo)
+
+mode_broom_sixty<-getmode(DF_Total$BroomOS_F_Sixty)
+mode_broom_sevtwo<-getmode(DF_Total$BroomOS_F_SevTwo)
+
+mode_steth_sixty<-getmode(DF_Total$StethOS_M_Sixty)
+mode_steth_sevtwo<-getmode(DF_Total$StethOS_M_SevTwo)
+
+mode_boxingglove_sixty<-getmode(DF_Total$BoxingGloveOS_M_Sixty)
+mode_boxingglove_sevtwo<-getmode(DF_Total$BoxingGloveOS_M_SevTwo)
+
+mode_firehat_sixty<-getmode(DF_Total$FireHatOS_M_Sixty)
+mode_firehat_sevtwo<-getmode(DF_Total$FireHatOS_M_SevTwo)
+
+mode_apple_sixty<-getmode(DF_Total$AppleOS_F_Sixty)
+mode_apple_sevtwo<-getmode(DF_Total$AppleOS_F_SevTwo)
+
+mode_dishwasher_sixty<-getmode(DF_Total$DishwasherOS_F_Sixty)
+mode_dishwasher_sevtwo<-getmode(DF_Total$DishwasherOS_F_SevTwo)
+
+mode_badge_sixty<-getmode(DF_Total$BadgeOS_M_Sixty)
+mode_badge_sevtwo<-getmode(DF_Total$BadgeOS_M_SevTwo)
+
+mode_babybottle_sixty<-getmode(DF_Total$BabyBottleOS_F_Sixty)
+mode_babybottle_sevtwo<-getmode(DF_Total$BabyBottleOS_F_SevTwo)
+
+mode_hairbrush_sixty<-getmode(DF_Total$HairbrushOS_F_Sixty)
+mode_hairbrush_sevtwo<-getmode(DF_Total$HairbrushOS_F_SevTwo)
+
+mode_car_sixty<-getmode(DF_Total$CarOS_M_Sixty)
+mode_car_sevtwo<-getmode(DF_Total$CarOS_M_SevTwo)
+
+mode_bat_sixty<-getmode(DF_Total$BatOS_M_Sixty)
+mode_bat_sevtwo<-getmode(DF_Total$BatOS_M_SevTwo)
+
+mode_iron_sixty<-getmode(DF_Total$IronOS_F_Sixty)
+mode_iron_sevtwo<-getmode(DF_Total$IronOS_F_SevTwo)
+
+mode_needle_sixty<-getmode(DF_Total$NeedleOS_F_Sixty)
+mode_needle_sevtwo<-getmode(DF_Total$NeedleOS_F_SevTwo)
+
+#longitudinal differences ######
+
+
