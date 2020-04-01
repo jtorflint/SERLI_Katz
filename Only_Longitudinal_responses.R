@@ -21,7 +21,7 @@ yplotlimit<- c(0,500)
 barplot(heightmascsix, names.arg=barnames, ylim=yplotlimit, main="60 Mo Responses to Masc Coded Items")
 
 heightmascsectwo<-OS_masc_freq_sevtwo
-barplot(heightmascsectwo, names.arg=barnames, ylim=yplotlimit, main=" 72 Mo Responses to Masc Coded Items")
+barplot(heightmascsectwo, names.arg=barnames, ylim=yplotlimit, main="72 Mo Responses to Masc Coded Items")
 
 heightfemsix<-OS_fem_freq_sixty
 barplot(heightfemsix, names.arg=barnames, ylim=yplotlimit, main="60 Mo Responses to Fem Coded Items")
