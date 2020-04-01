@@ -96,6 +96,77 @@ mode_iron_sevtwo<-getmode(DF_Total$IronOS_F_SevTwo)
 mode_needle_sixty<-getmode(DF_Total$NeedleOS_F_Sixty)
 mode_needle_sevtwo<-getmode(DF_Total$NeedleOS_F_SevTwo)
 
+
 #longitudinal differences ######
+
+Diff_HammerOS <- DF_Total$HammerOS_M_Sixty==DF_Total$Hammer_CF_M_SevTwo
+Freq_Diff_hammer<-table(Diff_HammerOS)
+
+Diff_DeskOS<-DF_Total$DeskOS_F_Sixty==DF_Total$DeskOS_F_SevTwo
+Freq_Diff_Desk<-table(Diff_DeskOS)
+
+Diff_ShovelOS<-DF_Total$ShovelOS_M_Sixty==DF_Total$ShovelOS_M_SevTwo
+Freq_diff_shovel<-table(Diff_ShovelOS)
+
+Diff_PitcherOS<-DF_Total$PitcherOS_F_Sixty==DF_Total$PitcherOS_F_SevTwo
+freq_diff_pitcher<- table(Diff_PitcherOS)
+
+Diff_Saw<-DF_Total$SawOS_M_Sixty==DF_Total$SawOS_M_SevTwo
+freq_diff_saw<-table(Diff_Saw)
+
+Diff_Stove<-DF_Total$StoveOS_F_Sixty==DF_Total$StoveOS_F_SevTwo
+freq_diff_stove<-table(Diff_Stove)
+
+Diff_Rifle<- DF_Total$RifleOS_M_Sixty==DF_Total$RifleOS_M_SevTwo
+freq_diff_rifle<-table(Diff_Rifle)
+
+Diff_Broom<-DF_Total$BroomOS_F_Sixty==DF_Total$BroomOS_F_SevTwo
+freq_diff_broom<-table(Diff_Broom)
+
+Diff_Steth<-DF_Total$StethOS_M_Sixty==DF_Total$StethOS_M_SevTwo
+freq_diff_steth<-table(Diff_Steth)
+
+Diff_BoxingGloves<-DF_Total$BoxingGloveOS_M_Sixty==DF_Total$BoxingGloveOS_M_SevTwo
+freq_diff_boxinggloves<-table(Diff_BoxingGloves)
+
+Diff_Firehat<-DF_Total$FireHatOS_M_Sixty==DF_Total$FireHatOS_M_SevTwo
+freq_diff_firehat<-table(Diff_Firehat)
+
+Diff_Apple<-DF_Total$AppleOS_F_Sixty==DF_Total$AppleOS_F_SevTwo
+freq_diff_apple<-table(Diff_Apple)
+
+Diff_Dishwahser<-DF_Total$DishwasherOS_F_Sixty==DF_Total$DishwasherOS_F_SevTwo
+freq_diff_dishwahser<-table(Diff_Dishwahser)
+
+Diff_Badge<-DF_Total$BadgeOS_M_Sixty==DF_Total$BadgeOS_M_SevTwo
+freq_diff_badge<-table(Diff_Badge)
+
+Diff_BabyBottle<-DF_Total$BabyBottleOS_F_Sixty==DF_Total$BabyBottleOS_F_SevTwo
+freq_diff_babybottle<-table(Diff_BabyBottle)
+
+Diff_Hairbrush<-DF_Total$HairbrushOS_F_Sixty==DF_Total$HairbrushOS_F_SevTwo
+freq_diff_hairbrush<-table(Diff_Hairbrush)
+
+Diff_Car<-DF_Total$CarOS_M_Sixty==DF_Total$CarOS_M_SevTwo
+freq_diff_car<-table(Diff_Car)
+
+Diff_Bat<-DF_Total$BatOS_M_Sixty==DF_Total$BatOS_M_SevTwo
+freq_diff_bat<-table(Diff_Bat)
+
+Diff_Iron<-DF_Total$IronOS_F_Sixty==DF_Total$IronOS_F_SevTwo
+freq_diff_iron<-table(Diff_Iron)
+
+Diff_Needle<-DF_Total$NeedleOS_F_Sixty==DF_Total$NeedleOS_F_SevTwo
+freq_diff_needle<-table(Diff_Needle)
+
+diff_masc_os<-c(Diff_HammerOS, Diff_ShovelOS, Diff_Saw, Diff_Rifle, Diff_Steth, Diff_BoxingGloves, Diff_Firehat, Diff_Badge, Diff_Car, Diff_Bat)
+diff_fem_os<-c(Diff_DeskOS, Diff_PitcherOS, Diff_Stove, Diff_Broom, Diff_Apple, Diff_Dishwahser, Diff_BabyBottle, Diff_Hairbrush, Diff_Iron, Diff_Needle)
+
+freq_diff_masc<-table(diff_masc_os)
+freq_diff_fem_os<-table(diff_fem_os)
+freq_diff_masc
+freq_diff_fem_os
+
+
 
 
